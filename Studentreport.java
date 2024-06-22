@@ -1,3 +1,5 @@
+// Student Grade Calculator
+
 import java.util.Scanner;
 
 public class Studentreport
@@ -39,7 +41,7 @@ public class Studentreport
 
         else if(per>70 && per<=80)
         {
-            System.out.println("Grade 'B");
+            System.out.println("Grade 'B'");
         }
 
         else if(per>60 && per<=70)
@@ -54,7 +56,7 @@ public class Studentreport
 
         else
         {
-            System.out.println("Grade F");
+            System.out.println("Grade 'F'");
         }
         
     }

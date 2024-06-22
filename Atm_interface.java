@@ -1,3 +1,5 @@
+// ATM Interface
+
 import java.util.Scanner;
 
 class ATM 
@@ -54,6 +56,7 @@ class ATM
 
         else if(opt == 4)
         {
+            System.out.println("Thank you. Visit again.");
             return;
         }
 

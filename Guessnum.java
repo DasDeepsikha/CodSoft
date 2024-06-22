@@ -15,7 +15,7 @@ public class Guessnum
         Random ran = new Random();
 
         // generating a random number betwwen 0 - 100
-        int ran_num = ran.nextInt(111);
+        int ran_num = ran.nextInt(101);
 
         // calling guess method
         guess(ran_num);
@@ -48,6 +48,7 @@ public class Guessnum
                 guess = in.nextInt();
                 System.out.println("");
 
+                
                 while ( guess<0 || guess>100 )
                     {
                         System.out.println("The number you have guessed is out of bound.");
@@ -55,12 +56,33 @@ public class Guessnum
                         guess = in.nextInt();
                         System.out.println("");
                     }
+                    while(attempt == 5)
+                    {
+                        System.out.println("Sorry ... You have used all your attempts.");
+                        System.out.println("The number was: "+ran_num);
+
+                        System.out.println("Do you want to play again?");
+                        System.out.println("Press '1' to play again and '0' to exit");
+                        int option = in.nextInt();
+
+                            if(option == 1){
+                                generateRandom();
+                            }
+                            else{
+                                System.out.println("Thanks for playing with us.");
+                                return;
+                            }
+                        return;
+                    }
+
             }
         
+            
+
         //Game won
         System.out.println("Correct answer."); 
-        System.out.println("Congratulations....Youwon!");
-        System.out.println("Number of attempt:"+attempt);
+        System.out.println("Congratulations....You won!");
+        System.out.println("Number of attempts:"+attempt);
         System.out.println("");
 
         // Want to play again
